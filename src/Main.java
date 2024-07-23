@@ -5,18 +5,21 @@ public class Main {
     private static final int PIN = 1234;      // Default PIN
 
     public static void main(String[] args) {
+
+        System.out.println("Welcome to ABC Bank");
+
         Scanner scanner = new Scanner(System.in);
 
         if (verifyPin(scanner)) {
             boolean quit = false;
 
             while (!quit) {
-                System.out.println("\nATM Menu:");
+                System.out.println("\nMenu:");
                 System.out.println("1. Check Balance");
                 System.out.println("2. Deposit Money");
                 System.out.println("3. Withdraw Money");
                 System.out.println("4. Quit");
-                System.out.print("Choose an option: ");
+                System.out.print("\nChoose an option: ");
 
                 int choice = scanner.nextInt();
 
@@ -32,7 +35,7 @@ public class Main {
                         break;
                     case 4:
                         quit = true;
-                        System.out.println("Thank you for using the ATM. Goodbye!");
+                        System.out.println("\nThank you for using the ATM. Goodbye!");
                         break;
                     default:
                         System.out.println("Invalid choice. Please try again.");
